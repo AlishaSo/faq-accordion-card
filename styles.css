@@ -1,10 +1,69 @@
+/* || Typography */   /*  */
 
+/* import specified font-family, and weigths */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
-/* the below two rules weres provided */
+body {
+  font-family: 'Kumbh Sans', sans-serif;  /* apply provided font to all text in page */
+  font-size: 12px;
+}
+
+/* the below two rules were provided */
 .attribution {
   font-size: 11px;
   text-align: center;
 }
+
+/* || General Styles */
+
+html {
+  /* Create a linear-gradient for the background of the site by using the provided
+     colors */
+  background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  background-repeat: no-repeat;
+  width: 100vw;    /* make sure that the background expands the whole viewing width */
+  height: 100vh;  /* make sure that the background expands the whole viewing height */
+}
+
+#component-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  margin: 2em 4em;
+  /*border: 1px solid black;*/
+}
+
+/* || Side Illustration */
+
+#illustration-wrapper {
+  /*border: 2px dotted blue;*/
+}
+
+#shadow-img {
+  width: 400px;
+  display: inherit;
+  align-self: center;
+}
+
+#at-box {
+}
+
+#desktop-img {
+}
+
+/* || Header */
+
+
+
+/* || Q&A/Text */
+
+#text-wrapper {
+  text-align: justify;
+  /*border: 3px groove red;*/
+}
+
+/* || Footer */
 
 .attribution a {
   color: hsl(228, 45%, 44%);
