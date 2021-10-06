@@ -1,7 +1,13 @@
 /* || General Styles */   /*  */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
-min-height: 100%;  /* make sure that the background expands the whole viewing height */
+  min-height: 100%;  /* make sure that the background expands the whole viewing height */
   /* Create a linear-gradient for the background of the site by using the provided
      colors */
   background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
@@ -9,8 +15,12 @@ min-height: 100%;  /* make sure that the background expands the whole viewing he
 }
 
 .component-wrapper {
+  display: flex;
+  flex-wrap: wrap;
   background-color: hsl(0, 0%, 100%);
   border-radius: 20px;
+  margin: 30px 25px;
+  padding: 24px;
   /*border: 1px solid black;*/
 }
 
@@ -42,16 +52,24 @@ body {
 /* || Header */
 
 h1 {
-
+  text-align: center;
 }
 
 /* || Text */
 
 .text-wrapper {
+  flex: 1;
   /*border: 3px groove red;*/
 }
 
-
+/* || Mobile Styles */
+@media (max-width: 375px) {
+  .component-wrapper {
+    background-image: url(./images/bg-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    padding: 24px;
+  }
+}
 
 /* || Footer */
 

@@ -4,19 +4,24 @@
     <meta charset='utf-8'/>
     <title>Frontend Mentor | FAQ Accordion Card</title> <!-- title for tab display-->
     <link rel='icon' type='image/png' sizes='32x32' href='./images/favicon-32x32.png'/> <!-- icon for tab display-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet"> <!-- import specified font-family, and weigths-->
     <link rel='stylesheet' href='./styles.css'/> <!-- CSS file -->
   </head>
   <body>
     <!-- provided text content, but the html elements were picked by me -->
-    <main id='component-wrapper'>
-      <div id='illustration-wrapper'><!-- -->
-        <!-- image has no alt text because it's not essential to the overall page
-        and can therefore be ignored by screenreaders if it does not load -->
-        <img id='at-box' src='./images/illustration-box-desktop.svg' alt=''/>
-        <img id='desktop-img' src='./images/illustration-woman-online-desktop.svg' alt=''/>
+    <main class='component-wrapper'>
+      <div class='illustration-wrapper'><!-- -->
+        <!-- include picture and source elements for proper art direction on illustration card-->
+        <picture>
+          <source media='(min-width: 376px)'
+                  srcset='/images/illustration-box-desktop.svg'/>
+          <source media='(min-width: 376px)'
+                  srcset='images/illustration-woman-online-desktop.svg'/>
+          <img src='images/illustration-woman-online-mobile.svg' alt=''/>
+        </picture>
       </div>
-      <div id='text-wrapper'>
+      <div class='text-wrapper'>
       <header>
         <h1>FAQ</h1>
       </header>
