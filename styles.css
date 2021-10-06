@@ -8,7 +8,7 @@ min-height: 100%;  /* make sure that the background expands the whole viewing he
   background-repeat: no-repeat;
 }
 
-#component-wrapper {
+.component-wrapper {
   background-color: hsl(0, 0%, 100%);
   border-radius: 20px;
   /*border: 1px solid black;*/
@@ -29,14 +29,14 @@ body {
 
 /* || Side Illustration */
 
-#illustration-wrapper {
+.illustration-wrapper {
   /*border: 2px dotted blue;*/
 }
 
-#at-box {
+.at-box {
 }
 
-#desktop-img {
+.desktop-img {
 }
 
 /* || Header */
@@ -47,9 +47,11 @@ h1 {
 
 /* || Text */
 
-#text-wrapper {
+.text-wrapper {
   /*border: 3px groove red;*/
 }
+
+
 
 /* || Footer */
 
