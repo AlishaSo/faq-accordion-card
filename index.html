@@ -26,45 +26,59 @@
           <h1>FAQ</h1>
         </header>
 
-        <input type='checkbox' id='q1'/>
-        <label for='q1'>How many team members can I invite?</label>
-        <div class='answer'>
-          <p>You can invite up to 2 additional users on the Free plan. There is no
-          limit on team members for the Premium plan.
-          </p>
+        <!-- include a radio for each answer, with the label text as the question
+             then add a div with a child paragraph for the answer. Repeat for all
+             question/answer pairs-->
+        <div class='item'> <!-- add div to encapsulate the diff question/answer pairs to be able to add the line at the bottom for styling-->
+          <input type='radio' id='q1' name='question'/>
+          <label for='q1'>How many team members can I invite?</label>
+          <div class='answer'>
+            <p>You can invite up to 2 additional users on the Free plan. There is no
+            limit on team members for the Premium plan.
+            </p>
+          </div>
         </div>
 
-        <input type='checkbox' id='q2'/>
-        <label for='q2'>What is the maximum file upload size?</label>
-        <div class='answer'>
-          <p>No more than 2GB. All files in your account must fit your allotted
-            storage space.
-          </p>
+        <div class='item'>
+          <input type='radio' id='q2' name='question'/>
+          <label for='q2'>What is the maximum file upload size?</label>
+          <div class='answer'>
+            <p>No more than 2GB. All files in your account must fit your allotted
+              storage space.
+            </p>
+          </div>
         </div>
 
-        <input type='checkbox' id='q3'/>
-        <label for='q3'>How do I reset my password?</label>
-        <div class='answer'>
-          <p>Click “Forgot password” from the login page or “Change password” from
-            your profile page. A reset link will be emailed to you.
-          </p>
+        <div class='item'>
+          <input type='radio' id='q3' name='question'/>
+          <label for='q3'>How do I reset my password?</label>
+          <div class='answer'>
+            <p>Click “Forgot password” from the login page or “Change password” from
+              your profile page. A reset link will be emailed to you.
+            </p>
+          </div>
         </div>
 
-        <input type='checkbox' id='q4'/>
-        <label for='q4'>Can I cancel my subscription?</label>
-        <div class='answer'>
-          <p>Yes! Send us a message and we’ll process your request no questions
-            asked.
-          </p>
+        <div class='item'>
+          <input type='radio' id='q4' name='question'/>
+          <label for='q4'>Can I cancel my subscription?</label>
+          <div class='answer'>
+            <p>Yes! Send us a message and we’ll process your request no questions
+              asked.
+            </p>
+          </div>
         </div>
 
-        <input type='checkbox' id='q5'/>
-        <label for='q5'>Do you provide additional support?</label>
-        <div class='answer'>
-          <p>Chat and email support is available 24/7. Phone lines are open during
-          normal business hours.
-          </p>
+        <div class='item'>
+          <input type='radio' id='q5' name='question'/>
+          <label for='q5'>Do you provide additional support?</label>
+          <div class='answer'>
+            <p>Chat and email support is available 24/7. Phone lines are open during
+            normal business hours.
+            </p>
+          </div>
         </div>
+
       </div>
     </main>
     <footer class='attribution' role='contentinfo'>

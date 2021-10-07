@@ -62,6 +62,37 @@ h1 {
   /*border: 3px groove red;*/
 }
 
+.item {
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+
+input {
+  display: none;   /* hide the checkboxes */
+}
+
+label {
+  display: block;
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+label:hover {
+  color: hsl(14, 88%, 75%);   /* add proper color to match template when hovering over the question */
+}
+
+.answer {
+  padding: 4px 0;
+}
+
+/* for hiding and showing the answer */
+input + label + .answer {
+  display: none;   /* hide the answers by default */
+}
+
+input:checked + label + .answer {
+  display: block;
+}
+
 /* || Mobile Styles */
 @media (max-width: 375px) {
   .component-wrapper {
