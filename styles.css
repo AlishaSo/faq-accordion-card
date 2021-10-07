@@ -49,18 +49,17 @@ body {
 .desktop-img {
 }
 
-/* || Header */
+/* || Text */
 
 h1 {
   text-align: center;
 }
 
-/* || Text */
-
 .text-wrapper {
   flex: 1;
-  /*border: 3px groove red;*/
 }
+
+/* || Accordion Styles */
 
 .item {
   border-bottom: 1px solid hsl(240, 5%, 91%);
@@ -74,23 +73,39 @@ label {
   display: block;
   padding: 8px 0;
   cursor: pointer;
+  position: relative;  /* this will allow for the label::after children to be able to use such properties as right, top, left, etc. */
 }
 
 label:hover {
   color: hsl(14, 88%, 75%);   /* add proper color to match template when hovering over the question */
 }
 
+.item-label::after {
+  content: '';  /* must be sent to empty in order for the backg image to be visible */
+  position: absolute;  /* allows for the image to be positioned relative to its parent (<label>) */
+  top: 50%;  /* centers the image vertically from the top */
+  transform: translateY(-50%);  /* centers image vertically from the bottom */
+  right: 0;  /* matches the side padding of its parent <label> */
+  width: 10px;
+  height: 10px;
+  background-image: url(images/icon-arrow-down.svg);
+  background-repeat: no-repeat;
+}
+
 .answer {
   padding: 4px 0;
 }
 
-/* for hiding and showing the answer */
 input + label + .answer {
   display: none;   /* hide the answers by default */
 }
 
 input:checked + label + .answer {
-  display: block;
+  display: block;  /* when a button has been clicked, display the answer */
+}
+
+input:checked + .item-label::after {
+  transform: translateY(-50%) rotate(0.5turn);  /* when the button has been clicked, flip the image 180º */
 }
 
 /* || Mobile Styles */
