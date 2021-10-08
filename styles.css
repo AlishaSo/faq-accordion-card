@@ -1,6 +1,6 @@
 /* || General Styles */   /*  */
 
-* {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -19,8 +19,8 @@ html {
   flex-wrap: wrap;
   background-color: hsl(0, 0%, 100%);
   border-radius: 20px;
-  margin: 30px 25px;
-  padding: 24px;
+  margin: 140px 25px 15px 25px;
+  padding: 0 24px;
   /*border: 1px solid black;*/
 }
 
@@ -40,7 +40,6 @@ body {
 /* || Side Illustration */
 
 .illustration-wrapper {
-  /*border: 2px dotted blue;*/
 }
 
 .at-box {
@@ -62,7 +61,7 @@ h1 {
 /* || Accordion Styles */
 
 .item {
-  border-bottom: 1px solid hsl(240, 5%, 91%);
+  border-bottom: 1px solid hsl(240, 5%, 91%);  /* add border to bottom of accordion item, such that it's still present when the content is displayed too */
 }
 
 input {
@@ -111,9 +110,19 @@ input:checked + .item-label::after {
 /* || Mobile Styles */
 @media (max-width: 375px) {
   .component-wrapper {
+    display: flex;
+    justify-content: center;
     background-image: url(./images/bg-pattern-mobile.svg);
     background-repeat: no-repeat;
-    padding: 24px;
+    background-position: top;
+  }
+
+  .illustration-wrapper {
+    margin-bottom: -50px;
+  }
+
+  img#mobile {
+    transform: translate(-15px, -110px);
   }
 }
 
