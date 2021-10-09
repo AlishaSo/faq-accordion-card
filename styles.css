@@ -7,7 +7,6 @@
 }
 
 html {
-  min-height: 100%;  /* make sure that the background expands the whole viewing height */
   /* Create a linear-gradient for the background of the site by using the provided
      colors */
   background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
@@ -15,13 +14,12 @@ html {
 }
 
 .component-wrapper {
-  display: flex;
+  /*display: flex;*/
   flex-wrap: wrap;
   background-color: hsl(0, 0%, 100%);
   border-radius: 20px;
-  margin: 140px 25px 15px 25px;
-  padding: 0 24px;
-  /*border: 1px solid black;*/
+  padding: 0 10px;
+  margin-bottom: 10px;
 }
 
 /* || Typography */
@@ -29,6 +27,12 @@ html {
 body {
   font-family: 'Kumbh Sans', sans-serif;  /* apply provided font to all text in page */
   font-size: 12px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  min-height: 100vh;  /*make sure that the background expands the whole viewing height */
 }
 
 /* the below two rules were provided */
@@ -37,25 +41,16 @@ body {
   text-align: center;
 }
 
-/* || Side Illustration */
-
-.illustration-wrapper {
-}
-
-.at-box {
-}
-
-.desktop-img {
-}
-
 /* || Text */
 
 h1 {
   text-align: center;
+  padding-bottom: 15px;
 }
 
 .text-wrapper {
   flex: 1;
+  max-height: auto;
 }
 
 /* || Accordion Styles */
@@ -77,6 +72,11 @@ label {
 
 label:hover {
   color: hsl(14, 88%, 75%);   /* add proper color to match template when hovering over the question */
+}
+
+.item-label {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .item-label::after {
@@ -115,14 +115,22 @@ input:checked + .item-label::after {
     background-image: url(./images/bg-pattern-mobile.svg);
     background-repeat: no-repeat;
     background-position: top;
+    min-width: 250px;
+    max-width: 300px;
+    max-height: 530px;
   }
 
-  .illustration-wrapper {
-    margin-bottom: -50px;
-  }
-
-  img#mobile {
+  #mobile {
     transform: translate(-15px, -110px);
+  }
+
+  .text-wrapper {
+    padding: 0 20px;
+  }
+
+  .overlap {
+    position: relative;
+    bottom: 70px;
   }
 }
 
