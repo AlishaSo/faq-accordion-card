@@ -7,6 +7,7 @@
 }
 
 html {
+  height: 100%;
   /* Create a linear-gradient for the background of the site by using the provided
      colors */
   background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
@@ -14,12 +15,11 @@ html {
 }
 
 .component-wrapper {
-  /*display: flex;*/
+  display: flex;
   flex-wrap: wrap;
   background-color: hsl(0, 0%, 100%);
   border-radius: 20px;
-  padding: 0 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 /* || Typography */
@@ -32,7 +32,10 @@ body {
   flex-direction: column;
   justify-content: center;
   margin: 0;
+  height: 100%;
   min-height: 100vh;  /*make sure that the background expands the whole viewing height */
+
+
 }
 
 /* the below two rules were provided */
@@ -51,7 +54,10 @@ h1 {
 
 .text-wrapper {
   flex: 1;
-  max-height: auto;
+}
+
+.mobile-illustration-wrapper, .desktop-illustration-wrapper {
+  flex: 1;
 }
 
 /* || Accordion Styles */
@@ -113,10 +119,6 @@ input:checked + label {
   color: hsl(238, 29%, 16%);
 }
 
-input:checked + .item {
-  padding-bottom: ;
-}
-
 input:checked + .item-label::after {
   transform: translateY(-50%) rotate(0.5turn);  /* when the button has been clicked, flip the image 180º */
 }
@@ -126,16 +128,29 @@ input:checked + .item-label::after {
   .component-wrapper {
     display: flex;
     justify-content: center;
+    align-items: center;
+    min-width: 250px;
+    max-width: 300px;
+    padding: 0 10px;
+  }
+
+  .illustration-box {
+    display: none;
+    position: absolute;
+  }
+
+  .mobile-illustration-wrapper {
     background-image: url(./images/bg-pattern-mobile.svg);
     background-repeat: no-repeat;
     background-position: top;
-    min-width: 250px;
-    max-width: 300px;
-    max-height: 530px;
   }
 
-  #mobile {
-    transform: translate(-15px, -110px);
+  img {
+    transform: translate(-8px, -110px);
+  }
+
+  .desktop-illustration-wrapper {
+    display: none;
   }
 
   .text-wrapper {
@@ -146,6 +161,59 @@ input:checked + .item-label::after {
     position: relative;
     bottom: 70px;
   }
+}
+
+/* || Desktop Styles */
+@media (min-width: 376px) and (max-width: 1440px) {
+  .component-wrapper {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    max-width: 920px;
+    max-height: 510px;
+  }
+
+  .illustration-box {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 150px;
+    transform: translateX(-48%) translateY(20%);
+  }
+
+  .mobile-illustration-wrapper {
+    display: none;
+  }
+
+  .desktop-illustration-wrapper {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 203% 179%;
+    background-position: 127% 71%;
+    height: 100%;
+    max-width: 920px;
+    padding-right: 60px;
+  }
+
+  .desktop-illustration-wrapper img {
+    width: 100%;
+    max-width: 400px;
+    margin-left: -15%;
+    position: static;
+  }
+
+  h1 {
+    text-align: left;
+  }
+
+  .text-wrapper {
+    padding: 70px 90px 80px 0;
+  }
+
 }
 
 /* || Footer */
