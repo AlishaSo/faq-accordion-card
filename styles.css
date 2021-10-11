@@ -34,8 +34,7 @@ body {
   margin: 0;
   height: 100%;
   min-height: 100vh;  /*make sure that the background expands the whole viewing height */
-
-
+  color: hsl(240, 6%, 50%);
 }
 
 /* the below two rules were provided */
@@ -50,6 +49,7 @@ h1 {
   text-align: center;
   padding-bottom: 15px;
   font-size: 28px;
+  color: hsl(238, 29%, 16%);
 }
 
 .text-wrapper {
@@ -74,7 +74,6 @@ label {
   display: block;
   cursor: pointer;
   position: relative;  /* this will allow for the label::after children to be able to use such properties as right, top, left, etc. */
-  color: hsl(240, 6%, 50%);
   font-weight: 500;
   padding: 8px 0;
 }
